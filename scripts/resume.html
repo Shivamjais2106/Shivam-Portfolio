@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amna Imran — Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    @page { size: A4; margin: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.45;
+      color: #1e293b;
+      background: #fff;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      display: grid;
+      grid-template-columns: 68mm 1fr;
+    }
+    .sidebar {
+      background: linear-gradient(180deg, #0f172a 0%, #1e1b4b 100%);
+      color: #e2e8f0;
+      padding: 14mm 10mm;
+    }
+    .main { padding: 14mm 12mm 12mm 10mm; }
+
+    .name {
+      font-size: 20pt;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .title {
+      font-size: 9pt;
+      font-weight: 600;
+      color: #a5b4fc;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .sidebar-section { margin-bottom: 14px; }
+    .sidebar h2 {
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #818cf8;
+      border-bottom: 1px solid rgba(129, 140, 248, 0.35);
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+    }
+    .contact-item {
+      font-size: 8.5pt;
+      margin-bottom: 5px;
+      color: #cbd5e1;
+      word-break: break-word;
+    }
+    .contact-item strong { color: #fff; font-weight: 600; display: block; font-size: 7pt; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1px; }
+
+    .skill-group { margin-bottom: 8px; }
+    .skill-group h3 { font-size: 8.5pt; font-weight: 600; color: #fff; margin-bottom: 3px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 3px; }
+    .tag {
+      font-size: 7pt;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(129, 140, 248, 0.15);
+      border: 1px solid rgba(129, 140, 248, 0.25);
+      color: #c7d2fe;
+    }
+
+    .edu-item, .cert-item { margin-bottom: 8px; }
+    .edu-item h3, .cert-item h3 { font-size: 8.5pt; font-weight: 600; color: #fff; }
+    .edu-item p, .cert-item p { font-size: 7.8pt; color: #94a3b8; margin-top: 1px; }
+    .date { font-size: 7.5pt; color: #64748b; }
+
+    .main h2 {
+      font-size: 9pt;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #4f46e5;
+      margin-bottom: 8px;
+      padding-bottom: 3px;
+      border-bottom: 2px solid #e0e7ff;
+    }
+    .section { margin-bottom: 12px; }
+
+    .summary {
+      font-size: 9.5pt;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    .project { margin-bottom: 9px; page-break-inside: avoid; }
+    .project-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 2px;
+    }
+    .project-head h3 { font-size: 10pt; font-weight: 700; color: #0f172a; }
+    .project-head .date { color: #64748b; font-size: 8pt; white-space: nowrap; }
+    .role { font-size: 8pt; font-weight: 600; color: #6366f1; margin-bottom: 3px; }
+    .project p { font-size: 8.8pt; color: #475569; margin-bottom: 4px; }
+    .tech { display: flex; flex-wrap: wrap; gap: 3px; }
+    .tech span {
+      font-size: 7pt;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 3px;
+      background: #f1f5f9;
+      color: #475569;
+    }
+
+    .highlights { list-style: none; }
+    .highlights li {
+      font-size: 8.5pt;
+      color: #475569;
+      padding-left: 10px;
+      position: relative;
+      margin-bottom: 3px;
+    }
+    .highlights li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #6366f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <aside class="sidebar">
+      <div class="name">Amna Imran</div>
+      <div class="title">AI Student · Developer · Designer</div>
+
+      <div class="sidebar-section">
+        <h2>Contact</h2>
+        <div class="contact-item"><strong>Email</strong>amnaimran404@gmail.com</div>
+        <div class="contact-item"><strong>Phone</strong>+92 333 0495370</div>
+        <div class="contact-item"><strong>Location</strong>Lahore, Pakistan</div>
+        <div class="contact-item"><strong>LinkedIn</strong>linkedin.com/in/amna-imran-4385052a7</div>
+        <div class="contact-item"><strong>GitHub</strong>github.com/amnaimran404</div>
+        <div class="contact-item"><strong>Portfolio</strong>amnaimran.dev</div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Technical Skills</h2>
+        <div class="skill-group">
+          <h3>AI & Machine Learning</h3>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">NLP</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Software Development</h3>
+          <div class="tags">
+            <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">C++</span><span class="tag">PHP</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Design & Product</h3>
+          <div class="tags">
+            <span class="tag">UI/UX</span><span class="tag">Figma</span><span class="tag">Branding</span><span class="tag">Three.js</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Data & Infrastructure</h3>
+          <div class="tags">
+            <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Pandas</span><span class="tag">AWS</span><span class="tag">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Education</h2>
+        <div class="edu-item">
+          <h3>BS Computer Science — AI</h3>
+          <p>NASTP NIIT University</p>
+          <p class="date">2023 — 2027 · Currently Enrolled</p>
+        </div>
+        <div class="edu-item">
+          <h3>Intermediate (ICS Physics)</h3>
+          <p>Queen Mary College (QMC)</p>
+          <p class="date">2021 — 2023</p>
+        </div>
+        <div class="edu-item">
+          <h3>Matriculation — Science</h3>
+          <p>KIPS Education System</p>
+          <p class="date">2019 — 2021</p>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2>Certifications</h2>
+        <div class="cert-item"><h3>Hugging Face Agents</h3><p>Hugging Face · 2026</p></div>
+        <div class="cert-item"><h3>Fundamentals of Agents</h3><p>Hugging Face · 2026</p></div>
+        <div class="cert-item"><h3>AI for Beginners</h3><p>NS Training · 2024</p></div>
+        <div class="cert-item"><h3>Graphic & Logo Design</h3><p>NS Training · 2024</p></div>
+        <div class="cert-item"><h3>Freelancing & SMM</h3><p>NS Training · 2024</p></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="section">
+        <h2>Professional Summary</h2>
+        <p class="summary">
+          Artificial Intelligence student and software engineer specializing in machine learning, full-stack development, and human-centered design. I build intelligent digital products—from NLP-powered health tools and computer-vision accessibility apps to immersive games and production-ready web experiences. Known for combining analytical rigor with strong visual craft across 11+ shipped projects.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Core Strengths</h2>
+        <ul class="highlights">
+          <li>End-to-end AI/ML pipelines: data preprocessing, model training, API deployment</li>
+          <li>Modern web engineering with React, Next.js, TypeScript, and responsive UI systems</li>
+          <li>Game development in C++, Unreal Engine, Python, and low-level systems programming</li>
+          <li>UI/UX, brand design, and portfolio-grade product presentation</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Selected Projects</h2>
+
+        <div class="project">
+          <div class="project-head"><h3>MediSense AI</h3><span class="date">2025</span></div>
+          <div class="role">AI/ML Engineer</div>
+          <p>Intelligent symptom analysis and prescription advisory system with NLP interface, confidence scoring, and FastAPI backend.</p>
+          <div class="tech"><span>Python</span><span>ML</span><span>NLP</span><span>FastAPI</span></div>
+        </div>
+
+        <div class="project">
+          <div class="project-head"><h3>GestureLingo</h3><span class="date">2025</span></div>
+          <div class="role">ML Engineer</div>
+          <p>Real-time sign language translator using MediaPipe hand landmarks and a custom CNN for accessible communication.</p>
+          <div class="tech"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span></div>
+        </div>
+
+        <div class="project">
+          <div class="project-head"><h3>Echoes Of Matrix</h3><span class="date">2024</span></div>
+          <div class="role">Solo Developer</div>
+          <p>3D first-person shooter built in Unreal Engine with C++ gameplay logic, AI behavior, and immersive environment design.</p>
+          <div class="tech"><span>C++</span><span>Unreal Engine</span><span>Game Design</span></div>
+        </div>
+
+        <div class="project">
+          <div class="project-head"><h3>AI Pacman Game</h3><span class="date">2024</span></div>
+          <div class="role">AI Developer</div>
+          <p>Classic Pacman reimagined with A* pathfinding and adaptive ghost AI using Python and Pygame.</p>
+          <div class="tech"><span>Python</span><span>AI</span><span>Algorithms</span></div>
+        </div>
+
+        <div class="project">
+          <div class="project-head"><h3>GravFall</h3><span class="date">2024</span></div>
+          <div class="role">Solo Developer</div>
+          <p>Retro 2D platformer built entirely in x86 Assembly with custom gravity physics and direct video memory rendering.</p>
+          <div class="tech"><span>Assembly</span><span>MASM</span><span>x86</span></div>
+        </div>
+
+        <div class="project">
+          <div class="project-head"><h3>Food Tracking Site</h3><span class="date">2023</span></div>
+          <div class="role">Full Stack Developer</div>
+          <p>Responsive food delivery platform with PHP/MySQL backend, order management, and live delivery tracking.</p>
+          <div class="tech"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+        </div>
+
+        <div class="project">
+          <div class="project-head"><h3>VR Platform UI/UX</h3><span class="date">2023</span></div>
+          <div class="role">UI Designer</div>
+          <p>Spatial interface system for VR with gaze-based interaction, holographic menus, and immersive navigation patterns.</p>
+          <div class="tech"><span>UI/UX</span><span>Virtual Reality</span><span>Figma</span></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
