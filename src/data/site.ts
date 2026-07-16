@@ -3,7 +3,7 @@ export const siteConfig = {
     title: "Shivam Jaiswal | Portfolio",
     description:
         "Portfolio of Shivam Jaiswal — AI student, developer, and designer building intelligent experiences with code, design, and innovation.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://amnaimran.dev",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://shivamjaiswal-portfolio.vercel.app",
     email: "shivamjais2106@gmail.com",
     phone: "+91 7869037289",
     location: "Bhopal, India",
