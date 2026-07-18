@@ -5,7 +5,7 @@ import { fileURLToPath } from "url";
 import { ResumeDocument } from "./ResumeDocument";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const pdfPath = path.join(__dirname, "..", "public", "amnaimran-resume.pdf");
+const pdfPath = path.join(__dirname, "..", "public", "Shivam-Jaiswal-resume.pdf");
 
 renderToFile(React.createElement(ResumeDocument), pdfPath)
     .then(() => console.log(`Resume PDF generated: ${pdfPath}`))

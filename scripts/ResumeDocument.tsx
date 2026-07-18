@@ -264,7 +264,7 @@ function ProjectItem({ project }: { project: (typeof projects)[number] }) {
 function ResumeHeader() {
     return (
         <View style={styles.header}>
-            <Text style={styles.name}>Amna Imran</Text>
+            <Text style={styles.name}>Shivam Jaiswal</Text>
             <Text style={styles.headline}>AI Student · Developer · Designer</Text>
             <View style={styles.contactRow}>
                 <Text style={styles.contactText}>amnaimran404@gmail.com  ·  +92 333 0495370  ·  Lahore, Pakistan</Text>
@@ -283,7 +283,7 @@ export function ResumeDocument() {
     const pageTwoProjects = projects.slice(3);
 
     return (
-        <Document title="Amna Imran — Resume" author="Amna Imran">
+        <Document title="Shivam Jaiswal — Resume" author="Shivam Jaiswal">
             <Page size="A4" style={styles.page}>
                 <ResumeHeader />
 

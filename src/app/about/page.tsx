@@ -54,7 +54,7 @@
 //                             <div className="relative w-full aspect-square max-w-md mx-auto rounded-[3rem] overflow-hidden border-8 border-white dark:border-white/5 shadow-2xl">
 //                                 <Image
 //                                     src="/profile.jpeg"
-//                                     alt="Amna Imran"
+//                                     alt="Shivam Jaiswal"
 //                                     fill
 //                                     className="object-cover"
 //                                 />
@@ -181,7 +181,7 @@
    src/app/about/page.tsx KO PURA REPLACE KAR DO IS FILE SE
    ============================================================================
    Changes:
-   - Image alt "Amna Imran" → "Shivam Jaiswal"
+   - Image alt "Shivam Jaiswal" → "Shivam Jaiswal"
    - Hero heading "AI Engineer" → "Full Stack Developer"
    - Hero description → original, MERN/Next.js focused
    - Current Focus badge updated
