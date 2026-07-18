@@ -15,6 +15,9 @@ export const metadata: Metadata = {
         template: `%s | ${siteConfig.name}`,
     },
     description: siteConfig.description,
+    alternates: {
+        canonical: siteConfig.url,
+    },
     openGraph: {
         type: "website",
         locale: "en_US",
@@ -44,6 +47,29 @@ export default function RootLayout({
     return (
         <html lang="en" suppressHydrationWarning>
             <body className={`${inter.className} selection:bg-cyber-neon selection:text-black`}>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "Person",
+                            name: siteConfig.name,
+                            url: siteConfig.url,
+                            image: `${siteConfig.url}/profile.jpeg`,
+                            jobTitle: "Full Stack Developer",
+                            email: siteConfig.email,
+                            address: {
+                                "@type": "PostalAddress",
+                                addressLocality: "Bhopal",
+                                addressCountry: "IN",
+                            },
+                            sameAs: [
+                                "https://www.linkedin.com/in/shivam-jaiswal-37a951369",
+                                "https://github.com/Shivamjais2106",
+                            ],
+                        }),
+                    }}
+                />
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"

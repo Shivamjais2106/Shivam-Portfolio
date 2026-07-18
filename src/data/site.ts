@@ -1,6 +1,7 @@
 export const siteConfig = {
     name: "Shivam Jaiswal",
     title: "Shivam Jaiswal | Portfolio",
+    jobTitle: "Full Stack Developer", 
     description:
         "Portfolio of Shivam Jaiswal — AI student, developer, and designer building intelligent experiences with code, design, and innovation.",
     url: process.env.NEXT_PUBLIC_SITE_URL || "https://shivamjaiswal-portfolio.vercel.app",

@@ -15,7 +15,7 @@ const jsonLd = {
             name: siteConfig.name,
             url: siteConfig.url,
             email: siteConfig.email,
-            jobTitle: "AI Student & Developer",
+            jobTitle: siteConfig.jobTitle,
             address: {
                 "@type": "PostalAddress",
                 addressLocality: siteConfig.location,
