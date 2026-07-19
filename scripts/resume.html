@@ -113,6 +113,24 @@
     .project-head .date { color: #64748b; font-size: 8pt; white-space: nowrap; }
     .role { font-size: 8pt; font-weight: 600; color: #6366f1; margin-bottom: 3px; }
     .project p { font-size: 8.8pt; color: #475569; margin-bottom: 4px; }
+    .project ul { list-style: none; margin-bottom: 4px; }
+    .project ul li {
+      font-size: 8.6pt;
+      color: #475569;
+      padding-left: 10px;
+      position: relative;
+      margin-bottom: 2px;
+    }
+    .project ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #6366f1;
+    }
     .tech { display: flex; flex-wrap: wrap; gap: 3px; }
     .tech span {
       font-size: 7pt;
@@ -147,42 +165,54 @@
   <div class="page">
     <aside class="sidebar">
       <div class="name">Shivam Jaiswal</div>
-      <div class="title">AI Student · Developer · Designer</div>
+      <div class="title">Full-Stack MERN Developer</div>
 
       <div class="sidebar-section">
         <h2>Contact</h2>
-        <div class="contact-item"><strong>Email</strong>amnaimran404@gmail.com</div>
-        <div class="contact-item"><strong>Phone</strong>+92 333 0495370</div>
-        <div class="contact-item"><strong>Location</strong>Lahore, Pakistan</div>
-        <div class="contact-item"><strong>LinkedIn</strong>linkedin.com/in/amna-imran-4385052a7</div>
-        <div class="contact-item"><strong>GitHub</strong>github.com/amnaimran404</div>
-        <div class="contact-item"><strong>Portfolio</strong>amnaimran.dev</div>
+        <div class="contact-item"><strong>Email</strong>shivamjais2106@gmail.com</div>
+        <div class="contact-item"><strong>Phone</strong>+91 78690 37289</div>
+        <div class="contact-item"><strong>Location</strong>Bhopal, Madhya Pradesh</div>
+        <div class="contact-item"><strong>LinkedIn</strong>linkedin.com/in/shivam-jaiswal-37a951369</div>
+        <div class="contact-item"><strong>GitHub</strong>github.com/Shivamjais2106</div>
+        <div class="contact-item"><strong>LeetCode</strong>leetcode.com/Shivamjais2303</div>
       </div>
 
       <div class="sidebar-section">
         <h2>Technical Skills</h2>
         <div class="skill-group">
-          <h3>AI & Machine Learning</h3>
+          <h3>Languages</h3>
           <div class="tags">
-            <span class="tag">Python</span><span class="tag">TensorFlow</span><span class="tag">PyTorch</span><span class="tag">NLP</span><span class="tag">OpenCV</span><span class="tag">MediaPipe</span>
+            <span class="tag">JavaScript</span><span class="tag">Java</span><span class="tag">C</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>Software Development</h3>
+          <h3>Frontend</h3>
           <div class="tags">
-            <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">C++</span><span class="tag">PHP</span>
+            <span class="tag">React.js</span><span class="tag">Next.js</span><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Tailwind CSS</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>Design & Product</h3>
+          <h3>Backend</h3>
           <div class="tags">
-            <span class="tag">UI/UX</span><span class="tag">Figma</span><span class="tag">Branding</span><span class="tag">Three.js</span>
+            <span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">REST APIs</span><span class="tag">JWT Auth</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3>Data & Infrastructure</h3>
+          <h3>Database</h3>
           <div class="tags">
-            <span class="tag">SQL</span><span class="tag">MySQL</span><span class="tag">Pandas</span><span class="tag">AWS</span><span class="tag">Docker</span>
+            <span class="tag">MongoDB</span><span class="tag">Mongoose</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>AI & Integration</h3>
+          <div class="tags">
+            <span class="tag">Groq API</span><span class="tag">Gemini API</span><span class="tag">Prompt Engineering</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3>Tools & Deployment</h3>
+          <div class="tags">
+            <span class="tag">Docker</span><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Postman</span><span class="tag">Vercel</span><span class="tag">Render</span>
           </div>
         </div>
       </div>
@@ -190,29 +220,27 @@
       <div class="sidebar-section">
         <h2>Education</h2>
         <div class="edu-item">
-          <h3>BS Computer Science — AI</h3>
-          <p>NASTP NIIT University</p>
-          <p class="date">2023 — 2027 · Currently Enrolled</p>
+          <h3>B.Tech — CS & IT</h3>
+          <p>Sagar Institute of Research and Technology, Bhopal</p>
+          <p class="date">2023 — 2027 · CPI: 6.38/10.00</p>
         </div>
         <div class="edu-item">
-          <h3>Intermediate (ICS Physics)</h3>
-          <p>Queen Mary College (QMC)</p>
-          <p class="date">2021 — 2023</p>
+          <h3>Senior Secondary (PCMB)</h3>
+          <p>Vidya Sagar Higher Secondary School, Bhopal</p>
+          <p class="date">2022 — 2023 · 83.8%</p>
         </div>
         <div class="edu-item">
-          <h3>Matriculation — Science</h3>
-          <p>KIPS Education System</p>
-          <p class="date">2019 — 2021</p>
+          <h3>Matriculation</h3>
+          <p>Vidya Sagar Higher Secondary School, Bhopal</p>
+          <p class="date">2020 — 2021 · 86%</p>
         </div>
       </div>
 
       <div class="sidebar-section">
         <h2>Certifications</h2>
-        <div class="cert-item"><h3>Hugging Face Agents</h3><p>Hugging Face · 2026</p></div>
-        <div class="cert-item"><h3>Fundamentals of Agents</h3><p>Hugging Face · 2026</p></div>
-        <div class="cert-item"><h3>AI for Beginners</h3><p>NS Training · 2024</p></div>
-        <div class="cert-item"><h3>Graphic & Logo Design</h3><p>NS Training · 2024</p></div>
-        <div class="cert-item"><h3>Freelancing & SMM</h3><p>NS Training · 2024</p></div>
+        <div class="cert-item"><h3>MERN Stack Development</h3><p>Apna College</p></div>
+        <div class="cert-item"><h3>Full-Stack Web Development</h3><p>Apna College</p></div>
+        <div class="cert-item"><h3>Data Structures & Algorithms</h3><p>Apna College</p></div>
       </div>
     </aside>
 
@@ -220,17 +248,17 @@
       <section class="section">
         <h2>Professional Summary</h2>
         <p class="summary">
-          Artificial Intelligence student and software engineer specializing in machine learning, full-stack development, and human-centered design. I build intelligent digital products—from NLP-powered health tools and computer-vision accessibility apps to immersive games and production-ready web experiences. Known for combining analytical rigor with strong visual craft across 11+ shipped projects.
+          Full-Stack MERN Developer seeking SDE-1 / Junior Developer roles. Built and deployed 3 production-ready applications serving 200+ users, integrating AI APIs (Groq, Gemini) for real-time features. Proficient in React.js, Next.js, Node.js, Express.js, MongoDB, Docker, and REST API development. Hackathon achiever with strong problem-solving skills and end-to-end project ownership experience.
         </p>
       </section>
 
       <section class="section">
         <h2>Core Strengths</h2>
         <ul class="highlights">
-          <li>End-to-end AI/ML pipelines: data preprocessing, model training, API deployment</li>
-          <li>Modern web engineering with React, Next.js, TypeScript, and responsive UI systems</li>
-          <li>Game development in C++, Unreal Engine, Python, and low-level systems programming</li>
-          <li>UI/UX, brand design, and portfolio-grade product presentation</li>
+          <li>End-to-end MERN development: UI/UX, database schema design, REST APIs, and deployment</li>
+          <li>Real-time AI feature integration using Groq and Gemini APIs with prompt engineering</li>
+          <li>JWT authentication, role-based access control, and secure middleware design</li>
+          <li>Problem solving, analytical thinking, and fast, self-directed learning</li>
         </ul>
       </section>
 
@@ -238,53 +266,47 @@
         <h2>Selected Projects</h2>
 
         <div class="project">
-          <div class="project-head"><h3>MediSense AI</h3><span class="date">2025</span></div>
-          <div class="role">AI/ML Engineer</div>
-          <p>Intelligent symptom analysis and prescription advisory system with NLP interface, confidence scoring, and FastAPI backend.</p>
-          <div class="tech"><span>Python</span><span>ML</span><span>NLP</span><span>FastAPI</span></div>
-        </div>
-
-        <div class="project">
-          <div class="project-head"><h3>GestureLingo</h3><span class="date">2025</span></div>
-          <div class="role">ML Engineer</div>
-          <p>Real-time sign language translator using MediaPipe hand landmarks and a custom CNN for accessible communication.</p>
-          <div class="tech"><span>Python</span><span>OpenCV</span><span>MediaPipe</span><span>TensorFlow</span></div>
-        </div>
-
-        <div class="project">
-          <div class="project-head"><h3>Echoes Of Matrix</h3><span class="date">2024</span></div>
-          <div class="role">Solo Developer</div>
-          <p>3D first-person shooter built in Unreal Engine with C++ gameplay logic, AI behavior, and immersive environment design.</p>
-          <div class="tech"><span>C++</span><span>Unreal Engine</span><span>Game Design</span></div>
-        </div>
-
-        <div class="project">
-          <div class="project-head"><h3>AI Pacman Game</h3><span class="date">2024</span></div>
-          <div class="role">AI Developer</div>
-          <p>Classic Pacman reimagined with A* pathfinding and adaptive ghost AI using Python and Pygame.</p>
-          <div class="tech"><span>Python</span><span>AI</span><span>Algorithms</span></div>
-        </div>
-
-        <div class="project">
-          <div class="project-head"><h3>GravFall</h3><span class="date">2024</span></div>
-          <div class="role">Solo Developer</div>
-          <p>Retro 2D platformer built entirely in x86 Assembly with custom gravity physics and direct video memory rendering.</p>
-          <div class="tech"><span>Assembly</span><span>MASM</span><span>x86</span></div>
-        </div>
-
-        <div class="project">
-          <div class="project-head"><h3>Food Tracking Site</h3><span class="date">2023</span></div>
+          <div class="project-head"><h3>TechnoKart</h3><span class="date">2025</span></div>
           <div class="role">Full Stack Developer</div>
-          <p>Responsive food delivery platform with PHP/MySQL backend, order management, and live delivery tracking.</p>
-          <div class="tech"><span>PHP</span><span>MySQL</span><span>HTML/CSS</span></div>
+          <p>Full-stack student marketplace with JWT authentication, rental management, and inventory management.</p>
+          <ul>
+            <li>Designed 15+ RESTful APIs covering product listings, authentication, and rental lifecycle</li>
+            <li>Built automated rental expiry notifications, reducing missed returns by ~30%</li>
+            <li>Independently managed UI/UX, schema design, and deployment on Vercel + Render in 4 weeks</li>
+          </ul>
+          <div class="tech"><span>Next.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span></div>
         </div>
 
         <div class="project">
-          <div class="project-head"><h3>VR Platform UI/UX</h3><span class="date">2023</span></div>
-          <div class="role">UI Designer</div>
-          <p>Spatial interface system for VR with gaze-based interaction, holographic menus, and immersive navigation patterns.</p>
-          <div class="tech"><span>UI/UX</span><span>Virtual Reality</span><span>Figma</span></div>
+          <div class="project-head"><h3>Internova AI</h3><span class="date">2025</span></div>
+          <div class="role">Full Stack AI Developer</div>
+          <p>AI-powered career platform with resume analysis, internship recommendations, and personalized roadmaps.</p>
+          <ul>
+            <li>Built 6+ features — AI interview generator, resume upload, career chatbot, skill roadmaps</li>
+            <li>Integrated Groq API for real-time resume feedback and interview preparation</li>
+            <li>Implemented JWT auth and deployed full-stack app on Vercel and Render</li>
+          </ul>
+          <div class="tech"><span>Next.js</span><span>Node.js</span><span>Groq API</span><span>MongoDB</span></div>
         </div>
+
+        <div class="project">
+          <div class="project-head"><h3>Civic Issue Report & Resolution System</h3><span class="date">2025</span></div>
+          <div class="role">Full Stack Developer</div>
+          <p>Full-stack civic issue reporting platform enabling citizens to report problems with real-time tracking.</p>
+          <ul>
+            <li>Integrated image/video uploads, interactive maps, and live location pinning</li>
+            <li>Implemented JWT auth, role-based access (Citizen/Admin/Authority), and admin dashboard</li>
+          </ul>
+          <div class="tech"><span>React.js</span><span>Node.js</span><span>Express.js</span><span>MongoDB</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Awards & Achievements</h2>
+        <ul class="highlights">
+          <li>3rd Position — Vibe Coding Competition, BMIET Sonipat Hackathon (2025), among 50+ teams</li>
+          <li>Developed and deployed 3 full-stack AI-powered applications serving 200+ users independently</li>
+        </ul>
       </section>
     </main>
   </div>

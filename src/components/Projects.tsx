@@ -39,9 +39,9 @@ function ProjectCard({ project, index }: {
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                        className="object-cover object-top transition-transform duration-1000 group-hover:scale-105"
                         priority={index < 2}
-                    />
+                        />
                 </div>
 
                 {/* Content Section (Right) */}
