@@ -201,6 +201,14 @@ import { projects } from "@/data/projects";
 import { projectCountLabel, siteConfig } from "@/data/site";
 import { FileDown } from "lucide-react";
 import { LiquidButton } from "@/components/UI/LiquidButton";
+import FAQ from "@/components/FAQ";
+import { experience } from "@/data/profile";
+
+const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const formatMonth = (isoDate: string) => {
+    const [year, month] = isoDate.split("-");
+    return `${MONTHS[Number(month) - 1]} ${year}`;
+};
 
 export default function AboutPage() {
     return (
@@ -223,10 +231,11 @@ export default function AboutPage() {
                         >
                             <span className="text-xs font-bold tracking-[0.5em] uppercase text-neonPurple mb-4 block">The Narrative</span>
                             <h1 className="text-4xl sm:text-6xl md:text-7xl font-black mb-8 tracking-tighter leading-none">
+                                <span className="sr-only">Shivam Jaiswal — </span>
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-neonPurple to-neonBlue">Full Stack Developer</span>
                             </h1>
                             <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl mb-8">
-                                A B.Tech Computer Science student who turns ideas into deployed, working products — blending the MERN stack with Next.js and AI integrations to build fast, functional, and thoughtfully designed web experiences.
+                                A MERN Stack Developer Intern at Fakhri IT Services and B.Tech Computer Science student who turns ideas into deployed, working products — blending the MERN stack with Next.js and AI integrations to build fast, functional, and thoughtfully designed web experiences.
                             </p>
                             <LiquidButton
                                 href={siteConfig.resumePath}
@@ -247,7 +256,7 @@ export default function AboutPage() {
                             <div className="relative w-full aspect-square max-w-md mx-auto rounded-[3rem] overflow-hidden border-8 border-white dark:border-white/5 shadow-2xl">
                                 <Image
                                     src="/profile.jpeg"
-                                    alt="Shivam Jaiswal"
+                                    alt="Shivam Jaiswal — MERN Stack Developer from Bhopal, India"
                                     fill
                                     className="object-cover"
                                 />
@@ -269,46 +278,47 @@ export default function AboutPage() {
             </section>
 
             {/* Roles & Experience Section */}
-            <section className="py-20 relative">
+            <section className="py-20 relative" aria-labelledby="experience-heading">
                 <div className="container mx-auto px-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            className="p-10 rounded-[3rem] bg-gradient-to-br from-neonPurple/10 to-transparent border border-neonPurple/20 backdrop-blur-sm"
-                        >
-                            <div className="flex items-center gap-6 mb-8">
-                                <div className="w-16 h-16 rounded-3xl bg-white dark:bg-white/5 flex items-center justify-center shadow-lg">
-                                    <Briefcase className="text-neonPurple" size={32} />
+                    <h2 id="experience-heading" className="sr-only">Experience</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            ...experience.map((role, i) => ({
+                                heading: role.company,
+                                subheading: role.title,
+                                period: `${formatMonth(role.startDate)} – ${i === 0 ? "Present" : formatMonth(role.endDate)}`,
+                                desc: role.summary,
+                                icon: Briefcase,
+                                accent: i === 0 ? "neonPurple" : "neonBlue",
+                            })),
+                            {
+                                heading: "Independent Projects",
+                                subheading: "Full Stack Developer",
+                                period: "2023 – Present",
+                                desc: "Designing and shipping full-stack web applications independently — from AI-integrated platforms to real-time marketplace apps — as part of an ongoing journey toward a professional Full Stack Developer role.",
+                                icon: Code,
+                                accent: "neonPurple",
+                            },
+                        ].map((card) => (
+                            <motion.article
+                                key={card.heading}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                className={`p-10 rounded-[3rem] bg-gradient-to-br ${card.accent === "neonBlue" ? "from-neonBlue/10 border-neonBlue/20" : "from-neonPurple/10 border-neonPurple/20"} to-transparent border backdrop-blur-sm`}
+                            >
+                                <div className="flex items-center gap-6 mb-8">
+                                    <div className="w-16 h-16 shrink-0 rounded-3xl bg-white dark:bg-white/5 flex items-center justify-center shadow-lg">
+                                        <card.icon className={card.accent === "neonBlue" ? "text-neonBlue" : "text-neonPurple"} size={32} />
+                                    </div>
+                                    <div>
+                                        <h3 className="text-2xl font-bold">{card.heading}</h3>
+                                        <p className={`${card.accent === "neonBlue" ? "text-neonBlue" : "text-neonPurple"} font-bold text-sm uppercase tracking-widest`}>{card.subheading}</p>
+                                        <p className="text-xs font-bold uppercase tracking-widest text-slate-400 mt-1">{card.period}</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3 className="text-2xl font-bold">RRID Tech Pvt. Ltd.</h3>
-                                    <p className="text-neonPurple font-bold text-sm uppercase tracking-widest">MERN Full Stack Developer Intern</p>
-                                </div>
-                            </div>
-                            <p className="text-slate-600 dark:text-white/60 leading-relaxed">
-                                Contributing to software design and development, API integration, debugging, and performance optimization across live projects as part of a full-time, hybrid internship.
-                            </p>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            className="p-10 rounded-[3rem] bg-gradient-to-br from-neonBlue/10 to-transparent border border-neonBlue/20 backdrop-blur-sm"
-                        >
-                            <div className="flex items-center gap-6 mb-8">
-                                <div className="w-16 h-16 rounded-3xl bg-white dark:bg-white/5 flex items-center justify-center shadow-lg">
-                                    <Code className="text-neonBlue" size={32} />
-                                </div>
-                                <div>
-                                    <h3 className="text-2xl font-bold">Independent Projects</h3>
-                                    <p className="text-neonBlue font-bold text-sm uppercase tracking-widest">Full Stack Developer</p>
-                                </div>
-                            </div>
-                            <p className="text-slate-600 dark:text-white/60 leading-relaxed">
-                                Designing and shipping full-stack web applications independently — from AI-integrated platforms to real-time marketplace apps — as part of an ongoing journey toward a professional Full Stack Developer role.
-                            </p>
-                        </motion.div>
+                                <p className="text-slate-600 dark:text-white/60 leading-relaxed">{card.desc}</p>
+                            </motion.article>
+                        ))}
                     </div>
                 </div>
             </section>
@@ -364,6 +374,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            <FAQ />
         </main>
     );
 }

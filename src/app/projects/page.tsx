@@ -281,6 +281,28 @@ import { motion, AnimatePresence, Variants } from "framer-motion";
 import { ArrowUpRight, ArrowLeft, Calendar, Filter, Sparkles, FlaskConical } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import { projects } from "@/data/projects";
+import { siteConfig } from "@/data/site";
+import { JsonLd, personId } from "@/components/PersonJsonLd";
+
+const collectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${siteConfig.url}/projects#collection`,
+    url: `${siteConfig.url}/projects`,
+    name: "Projects by Shivam Jaiswal",
+    author: { "@id": personId },
+    mainEntity: {
+        "@type": "ItemList",
+        itemListElement: projects
+            .filter((p) => (p.category ?? "major") === "major")
+            .map((p, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `${siteConfig.url}/projects/${p.slug}`,
+                name: p.title.trim(),
+            })),
+    },
+};
 
 const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -325,6 +347,7 @@ export default function AllProjectsPage() {
 
     return (
         <main className="min-h-screen text-slate-900 dark:text-white transition-colors duration-500">
+            <JsonLd data={collectionJsonLd} />
             <Navbar />
 
             {/* Hero Header */}

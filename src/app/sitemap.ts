@@ -4,19 +4,21 @@ import { projects } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const base = siteConfig.url;
+    const lastModified = new Date();
 
     const staticRoutes: MetadataRoute.Sitemap = [
-        { url: base, lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
-        { url: `${base}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
-        { url: `${base}/projects`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
-        { url: `${base}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
+        { url: base, lastModified, changeFrequency: "monthly", priority: 1, images: [`${base}/profile.jpeg`] },
+        { url: `${base}/about`, lastModified, changeFrequency: "monthly", priority: 0.9 },
+        { url: `${base}/projects`, lastModified, changeFrequency: "weekly", priority: 0.9 },
+        { url: `${base}/contact`, lastModified, changeFrequency: "yearly", priority: 0.7 },
     ];
 
     const projectRoutes: MetadataRoute.Sitemap = projects.map((project) => ({
         url: `${base}/projects/${project.slug}`,
-        lastModified: new Date(),
+        lastModified,
         changeFrequency: "monthly",
-        priority: 0.6,
+        priority: (project.category ?? "major") === "major" ? 0.8 : 0.5,
+        images: [`${base}${encodeURI(project.image)}`],
     }));
 
     return [...staticRoutes, ...projectRoutes];

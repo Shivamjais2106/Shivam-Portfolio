@@ -1,12 +1,20 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import Footer from "@/components/Footer";
 import CursorGlow from "@/components/CursorGlow";
+import PersonJsonLd from "@/components/PersonJsonLd";
 import { siteConfig } from "@/data/site";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+    themeColor: [
+        { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+        { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    ],
+};
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteConfig.url),
@@ -15,27 +23,43 @@ export const metadata: Metadata = {
         template: `%s | ${siteConfig.name}`,
     },
     description: siteConfig.description,
+    applicationName: `${siteConfig.name} Portfolio`,
+    keywords: siteConfig.keywords,
+    authors: [{ name: siteConfig.name, url: siteConfig.url }],
+    creator: siteConfig.name,
+    publisher: siteConfig.name,
+    category: "technology",
+    formatDetection: { telephone: false },
     alternates: {
-        canonical: siteConfig.url,
+        types: {
+            "text/plain": "/llms.txt",
+        },
     },
     openGraph: {
-        type: "website",
-        locale: "en_US",
-        url: siteConfig.url,
+        type: "profile",
+        firstName: "Shivam",
+        lastName: "Jaiswal",
+        locale: "en_IN",
         siteName: siteConfig.name,
         title: siteConfig.title,
         description: siteConfig.description,
-        images: [{ url: "/profile.jpeg", width: 800, height: 800, alt: siteConfig.name }],
     },
     twitter: {
         card: "summary_large_image",
         title: siteConfig.title,
         description: siteConfig.description,
-        images: ["/profile.jpeg"],
+        creator: siteConfig.twitterHandle,
     },
     robots: {
         index: true,
         follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            "max-image-preview": "large",
+            "max-snippet": -1,
+            "max-video-preview": -1,
+        },
     },
 };
 
@@ -45,31 +69,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en-IN" suppressHydrationWarning>
             <body className={`${inter.className} selection:bg-cyber-neon selection:text-black`}>
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
-                            "@context": "https://schema.org",
-                            "@type": "Person",
-                            name: siteConfig.name,
-                            url: siteConfig.url,
-                            image: `${siteConfig.url}/profile.jpeg`,
-                            jobTitle: "Full Stack Developer",
-                            email: siteConfig.email,
-                            address: {
-                                "@type": "PostalAddress",
-                                addressLocality: "Bhopal",
-                                addressCountry: "IN",
-                            },
-                            sameAs: [
-                                "https://www.linkedin.com/in/shivam-jaiswal-37a951369",
-                                "https://github.com/Shivamjais2106",
-                            ],
-                        }),
-                    }}
-                />
+                <PersonJsonLd />
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="dark"
