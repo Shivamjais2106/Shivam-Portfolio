@@ -2,7 +2,7 @@
 
 A modern, interactive personal portfolio website built with **Next.js**, showcasing my projects, skills, education, and certifications. Designed with smooth animations, a 3D hero section, and a clean, responsive UI.
 
-🔗 **Live Site:** [shivam-portfolio.vercel.app](https://shivamjaiswal-portfolio.vercel.app)
+🔗 **Live Site:** [shivamjaiswal-portfolio.vercel.app](https://shivamjaiswal-portfolio.vercel.app)
 
 ---
 
@@ -61,7 +61,7 @@ A modern, interactive personal portfolio website built with **Next.js**, showcas
 
 ```bash
 # Clone the repository
-git clone https://github.com/shivamjais058/Shivam-Portfolio.git
+git clone https://github.com/Shivamjais2106/Shivam-Portfolio.git
 
 # Navigate into the project
 cd Shivam-Portfolio
@@ -92,6 +92,21 @@ npm run build
 npm start
 ```
 
+### Deploy to Vercel
+
+1. Import this GitHub repository into Vercel and keep the project root as the root directory.
+2. In **Project Settings → Environment Variables**, set `NEXT_PUBLIC_SITE_URL` to `https://shivamjaiswal-portfolio.vercel.app` for the **Production** environment.
+3. Confirm any existing production environment variables required by the contact API are configured in Vercel. Do not commit secret values.
+4. Deploy the `main` branch. If GitHub is connected to Vercel, pushing a commit to `main` starts a production deployment automatically; otherwise deploy from the Vercel dashboard or CLI.
+5. After deployment, verify the canonical domain is assigned to the production deployment and check `/robots.txt`, `/sitemap.xml`, and `/llms.txt` on that domain.
+
+### Verify SEO, AEO, and GEO
+
+- Add the production site to [Google Search Console](https://search.google.com/search-console), verify ownership, submit `/sitemap.xml`, and use URL Inspection to request indexing of the homepage, `/about`, `/projects`, and important project pages.
+- Add the site to [Bing Webmaster Tools](https://www.bing.com/webmasters/) and submit the sitemap.
+- Check structured data with [Schema.org Validator](https://validator.schema.org/) and supported rich-result markup with Google's [Rich Results Test](https://search.google.com/test/rich-results). Valid markup does not guarantee a search feature or AI citation.
+- Confirm the production pages render the expected title, canonical URL, social preview, visible FAQ answers, and project details. Recheck after future profile or project updates so the page content, JSON-LD, and `/llms.txt` remain consistent.
+
 ---
 
 ## 📸 Adding/Updating Content
@@ -113,8 +128,8 @@ The resume is auto-generated as a PDF using the script in `scripts/generate-resu
 
 Feel free to reach out via the contact form on the site, or connect with me directly:
 
-- **Portfolio:** [shivam-portfolio.vercel.app](https://shivamjaiswal-portfolio.vercel.app)
-- **GitHub:** [@shivamjais058](https://github.com/shivamjais058)
+- **Portfolio:** [shivamjaiswal-portfolio.vercel.app](https://shivamjaiswal-portfolio.vercel.app)
+- **GitHub:** [@Shivamjais2106](https://github.com/Shivamjais2106)
 
 ---
 

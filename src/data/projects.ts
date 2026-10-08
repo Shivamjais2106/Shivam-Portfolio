@@ -99,7 +99,7 @@ export const projects: Project[] = [
         result: "Built a full-stack civic reporting platform with a government-style interface and structured issue tracking.",
         tech: ["Next.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
         icon: Landmark,
-        image: "/projects/civic-issue.webp",
+        image: "/projects/civic-Issue.webp",
         color: "from-red-500/30 to-rose-500/30",
         hexColor: "#dc2626",
         glow: "rgba(220, 38, 38, 0.5)",
@@ -118,7 +118,6 @@ export const projects: Project[] = [
         result: "Created a hackathon project promoting entrepreneurship through AI assistance.",
         tech: ["HTML5", "CSS3", "JavaScript", "AI APIs (ChatGPT/Gemini)"],
         icon: Sprout,
-        // NOTE: file in your folder is named "rural-edge.png", not "ruralBiz-ai" — using actual filename below.
         image: "/projects/ruralBiz-ai.webp",
         color: "from-lime-500/30 to-green-500/30",
         hexColor: "#84cc16",
@@ -138,7 +137,6 @@ export const projects: Project[] = [
         result: "Developed a visually appealing e-commerce frontend with responsive layouts, reusable components, and an optimized user experience.",
         tech: ["React.js", "Vite", "JavaScript", "Tailwind CSS", "React Router", "HTML5", "CSS3"],
         icon: Shirt,
-        // TODO: no image found in your projects/ folder for this one yet — add "urbanthreads.png" or update this path.
         image: "/projects/urban-trends.webp",
         color: "from-orange-500/30 to-amber-500/30",
         hexColor: "#f97316",
@@ -158,7 +156,6 @@ export const projects: Project[] = [
         result: "Built a complete URL shortening system with analytics and QR code support.",
         tech: ["React", "Vite", "Node.js", "Express.js", "MongoDB", "Mongoose", "NanoID", "Tailwind CSS", "DaisyUI"],
         icon: Link2,
-        // TODO: no image found in your projects/ folder for this one yet — add "linkforge.png" or update this path.
         image: "/projects/linkForge.webp",
         color: "from-sky-500/30 to-blue-500/30",
         hexColor: "#0ea5e9",
@@ -180,7 +177,6 @@ export const projects: Project[] = [
         result: "Built multiple responsive landing page layouts demonstrating strong CSS fundamentals.",
         tech: ["HTML", "CSS", "JavaScript"],
         icon: LayoutTemplate,
-        // TODO: no image found in your projects/ folder for this one yet — add "landing-pages.png" or update this path.
         image: "/projects/landingpages.webp",
         color: "from-zinc-500/30 to-slate-500/30",
         hexColor: "#71717a",
@@ -201,7 +197,6 @@ export const projects: Project[] = [
         result: "Built a visually accurate Spotify interface clone using HTML and CSS.",
         tech: ["HTML", "CSS"],
         icon: Music,
-        // NOTE: file in your folder is named "spotify-clone.png", not "spotify-ui-clone" — using actual filename below.
         image: "/projects/spotify-Clone.webp",
         color: "from-green-500/30 to-lime-500/30",
         hexColor: "#1db954",
@@ -242,8 +237,7 @@ export const projects: Project[] = [
         result: "Built a clean, reusable pet profile card with smooth hover interactions.",
         tech: ["HTML", "CSS"],
         icon: Cat,
-        // TODO: no image found in your projects/ folder for this one yet — add "pet-card.png" or update this path.
-        image: "/projects/pet-card.webp",
+        image: "/projects/pet card.webp",
         color: "from-pink-400/30 to-rose-400/30",
         hexColor: "#f472b6",
         glow: "rgba(244, 114, 182, 0.5)",
@@ -263,7 +257,7 @@ export const projects: Project[] = [
         result: "Built multiple smooth, eye-catching text animation effects using HTML and CSS.",
         tech: ["HTML", "CSS"],
         icon: Type,
-        image: "/projects/text-animation.png",
+        image: "/projects/text-animation.webp",
         color: "from-amber-400/30 to-yellow-400/30",
         hexColor: "#fbbf24",
         glow: "rgba(251, 191, 36, 0.5)",
@@ -283,7 +277,7 @@ export const projects: Project[] = [
         result: "Delivered a working, responsive UI implementation matching the challenge requirements.",
         tech: ["HTML", "CSS", "JavaScript"],
         icon: LayoutGrid,
-        image: "/projects/unstop-task.png",
+        image: "/projects/unstop-task.svg",
         color: "from-slate-600/30 to-gray-600/30",
         hexColor: "#475569",
         glow: "rgba(71, 85, 105, 0.5)",
@@ -303,8 +297,7 @@ export const projects: Project[] = [
         result: "Delivered a functional prototype demonstrating rapid development under pressure.",
         tech: ["HTML", "CSS", "JavaScript"],
         icon: Trophy,
-        // TODO: no image found in your projects/ folder for this one yet — add "hackday.png" or update this path.
-        image: "/projects/hackday.png",
+        image: "/projects/hackday.svg",
         color: "from-orange-600/30 to-red-500/30",
         hexColor: "#ea580c",
         glow: "rgba(234, 88, 12, 0.5)",

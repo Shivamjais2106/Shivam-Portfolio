@@ -60,12 +60,11 @@ export default function HomePageClient() {
                             className="hero-content z-20 text-center lg:text-left"
                         >
                             <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 leading-tight text-slate-900 dark:text-white">
-                                Hi, Welcome to{" "}
+                                Hi, I&apos;m{" "}
                                 <span className="text-neonPurple neon-text-purple">{siteConfig.name}</span>
-                                <br />
                             </h1>
                             <span className="bg-clip-text text-transparent bg-gradient-to-r from-neonBlue to-neonCyan text-2xl sm:text-3xl md:text-4xl font-bold mb-8 leading-tight block">
-                                Portfolio
+                                {siteConfig.jobTitle} · {siteConfig.location}
                             </span>
 
                             <div className="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start">

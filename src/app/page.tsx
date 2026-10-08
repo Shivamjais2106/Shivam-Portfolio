@@ -16,7 +16,6 @@ const jsonLd = {
     description: siteConfig.description,
     isPartOf: { "@id": websiteId },
     mainEntity: { "@id": personId },
-    dateModified: new Date().toISOString(),
 };
 
 export default function Home() {
